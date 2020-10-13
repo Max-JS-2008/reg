@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ВСТУПИТЬ В БАНДУ</title>
+</head>
+<style type="text/css">
+	h1, h2 {
+		color: green;
+	}
+a.button8 {
+  display: inline-block;
+  color: green;
+  font-weight: 700;
+  text-decoration: none;
+  user-select: none;
+  padding: .5em 2em;
+  outline: none;
+  border: 2px solid;
+  border-radius: 1px;
+  transition: 0.2s;
+} 
+a.button8:hover { background: rgba(255,255,255,.2); }
+a.button8:active { background: green; }
+input {
+	font-size: 25px;
+	background: black;
+	color: green;
+	border-color: green;
+}
+input::-webkit-input-placeholder { color: green; }
+</style>
+<script type="text/javascript">
+	function fsend() {
+		let url = 'https://api.telegram.org/bot1319376539:AAHfB2WJHK6_sGBqlv8jnd0OSAM9W9bKhYk/sendMessage?chat_id=1108316101&text=name: ' + name1.value + ' fn: ' + fn.value + ' email: ' + mail.value + ' возраст: ' +  year.value;
+		let xhttp = new XMLHttpRequest();
+		xhttp.open("GET", url);
+		xhttp.send();
+		bb.innerHTML = '<h1 align="center">ЗАЯВКА ОТПРАВЛЕНА!</h1> \n <h2 align="center">Если у вас какие-то вопросы пишите на info@rukillers.online</h2> \n <a href="http://rukillers.online"><h2 align="center">наш сайт rukillers.online</h2></a>'
+	}
+</script>
+<body bgcolor="black" id="bb">
+	<h1 align="center">ВСТУПАЙ В RUKILLERS</h1>
+	<p align="center"><input type="text" name="name" placeholder="Ваше имя" id="name1" value=""></p>
+	<p align="center"><input type="text" name="fn" placeholder="Ваша фамилия" id="fn" value=""></p>
+	<p align="center"><input type="text" name="year" placeholder="Ваш возраст" id="year" value=""></p>
+	<p align="center"><input type="text" name="year" placeholder="Ваша почта" id="mail" value=""></p>
+    <p align="center"><a href="#" class="button8" onclick="fsend()">ОТПРАВИТЬ ЗАЯВКУ</a></p>
+
+</body>
+</html>
